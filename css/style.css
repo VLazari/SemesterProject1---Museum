@@ -1,0 +1,141 @@
+/* General ---> */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --colorLight: #f2f2f2;
+    --amatic: "Amatic SC", Verdana, Arial, Helvetica, sans-serif;
+    --andika: Andika, Verdana, Arial, Helvetica, sans-serif;
+    --public: "Public Sans", Tahoma, Verdana, sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1500px;
+    font-family: var(--andika);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* <--- General */
+
+/* Header ---> */
+
+header {
+    height: 200px;
+    background-image: url(../images/celso-405219.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--amatic);
+    font-size: 30px;
+    color: var(--colorLight);
+    padding: 10px;
+}
+
+.navigation {
+    display: none;
+}
+
+.nav-link {
+    color: var(--colorLight);
+    font-family: var(--public);
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.navigation li {
+    display: inline-block;
+    padding: 10px 30px;
+    letter-spacing: 3px;
+}
+
+.mobile-menue {
+    color: #f2f2f2;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+/* <--- Header */
+
+/* Index ---> */
+
+/* .main-content {
+ border: 3px double black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+} */
+
+.home-section1 {
+    height: 300px;
+    display: flex;
+}
+.section1-img {
+    background-image: url(../images/tyrannosaurus.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+}
+.section1-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #008a9c;
+    color: var(--colorLight);
+}
+p {
+    width: 50%;
+}
+
+/* <--- Index */
+
+/* <--- General */
+/* ---> General */
+/* <--- General */
+/* ---> General */
+/* <--- General */
+/* ---> General */
+/* <--- General */
+
+@media screen and (min-width: 950px) {
+    .navigation {
+        display: flex;
+        justify-content: space-around;
+    }
+    .mobile-menue {
+        display: none;
+    }
+}
+
+@keyframes dino {
+    0% {
+        opacity: 0%;
+    }
+    20% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
