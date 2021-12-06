@@ -1,27 +1,36 @@
 /* General ---> */
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --colorLight: #f2f2f2;
-    --amatic: "Amatic SC", Verdana, Arial, Helvetica, sans-serif;
-    --andika: Andika, Verdana, Arial, Helvetica, sans-serif;
-    --public: "Public Sans", Tahoma, Verdana, sans-serif;
+  --colorLight: #f2f2f2;
+  --colorSkyBlue: #6bbef2;
+  --colorBlue: #0487d9;
+  --colorDarkBlue: #03258c;
+  --colorAction: #f27405;
+  --amatic: "Amatic SC", Verdana, Arial, Helvetica, sans-serif;
+  --andika: Andika, Verdana, Arial, Helvetica, sans-serif;
+  --public: "Public Sans", Tahoma, Verdana, sans-serif;
 }
 
 body {
-    margin: 0 auto;
-    max-width: 1500px;
-    font-family: var(--andika);
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+  margin: 0 auto;
+  max-width: 1500px;
+  font-family: var(--andika);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+h2,
+h3 {
+  font-family: var(--public);
 }
 
 /* <--- General */
@@ -29,84 +38,156 @@ a {
 /* Header ---> */
 
 header {
-    height: 200px;
-    background-image: url(../images/celso-405219.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  height: 230px;
+  background-image: url(../images/celso-405219.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    font-family: var(--amatic);
-    font-size: 30px;
-    color: var(--colorLight);
-    padding: 10px;
+  font-family: var(--amatic);
+  font-size: 35px;
+  color: var(--colorLight);
+  padding: 10px;
+}
+
+.nav-link:hover,
+#active {
+  text-decoration: underline;
+  color: var(--colorSkyBlue);
+  text-transform: uppercase;
+}
+
+#menu {
+  display: none;
 }
 
 .navigation {
-    display: none;
+  display: none;
 }
 
 .nav-link {
-    color: var(--colorLight);
-    font-family: var(--public);
-    font-weight: 600;
-    font-size: 25px;
+  color: var(--colorLight);
+  font-family: var(--public);
+  font-weight: 600;
+  font-size: 25px;
 }
 
-.nav-link:hover {
-    text-decoration: underline;
+.support,
+.support:hover {
+  color: var(--colorAction);
 }
 
 .navigation li {
-    display: inline-block;
-    padding: 10px 30px;
-    letter-spacing: 3px;
+  display: inline-block;
+  padding: 10px 0;
+  letter-spacing: 3px;
+  border: 1px solid var(--colorLight);
+  width: 100%;
+  text-align: center;
 }
 
-.mobile-menue {
-    color: #f2f2f2;
-    font-size: 2rem;
-    padding: 10px;
+.mobile-menu {
+  color: #f2f2f2;
+  font-size: 2rem;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#menu:checked + .navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--colorLight);
+  position: absolute;
+  top: 230px;
+  background-color: #0e0e0c;
+  width: 99.5%;
 }
 
 /* <--- Header */
 
 /* Index ---> */
 
-/* .main-content {
- border: 3px double black;
+.main-content {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-} */
+  grid-template-columns: fit-content(auto, 1fr);
+  grid-template-rows: repeat(130, 50px);
+  column-gap: 10px;
+  row-gap: 10px;
+}
 
-.home-section1 {
-    height: 300px;
-    display: flex;
+.home-box1,
+.home-box3,
+.home-box4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--colorBlue);
+  color: var(--colorLight);
 }
-.section1-img {
-    background-image: url(../images/tyrannosaurus.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 50%;
+.home-box1 {
+  grid-row: span 7;
+  background-color: #008a9c;
 }
-.section1-text {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #008a9c;
-    color: var(--colorLight);
+
+.home-box1 p {
+  width: 50%;
 }
-p {
-    width: 50%;
+
+.home-box2 {
+  grid-row: span 7;
+  background-image: url(../images/tyrannosaurus.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
+.home-box4 {
+  grid-row: span 3;
+}
+
+.img1 {
+  background-image: url(../images/astronomy-ge5cb05244_640.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.img2 {
+  background-image: url(../images/evolution-g9652136be_640.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.img3 {
+  background-image: url(../images/biology-gdf6883720_640.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.img4 {
+  background-image: url(../images/tree-gb7c1e05a2_640.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.img5 {
+  background-image: url(../images/linear-gfd439c291_640.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* h3 {
+  background-color: var(--colorSkyBlue);
+} */
 
 /* <--- Index */
 
@@ -119,23 +200,33 @@ p {
 /* <--- General */
 
 @media screen and (min-width: 950px) {
-    .navigation {
-        display: flex;
-        justify-content: space-around;
-    }
-    .mobile-menue {
-        display: none;
-    }
-}
+  .navigation {
+    display: flex;
+    justify-content: space-around;
+  }
 
-@keyframes dino {
-    0% {
-        opacity: 0%;
-    }
-    20% {
-        opacity: 0%;
-    }
-    100% {
-        opacity: 100%;
-    }
+  .navigation li {
+    border: 0;
+    padding: 10px 20px;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .main-content {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .col2 {
+    grid-column: span 2;
+  }
+
+  .col3 {
+    grid-column: span 3;
+  }
+
+  .col6 {
+    grid-column: span 6;
+  }
 }
