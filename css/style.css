@@ -10,6 +10,7 @@
   --colorBlue: #0487d9;
   --colorDarkBlue: #03258c;
   --colorAction: #f27405;
+  --colorRubin: #008a9c;
   --amatic: "Amatic SC", Verdana, Arial, Helvetica, sans-serif;
   --andika: Andika, Verdana, Arial, Helvetica, sans-serif;
   --public: "Public Sans", Tahoma, Verdana, sans-serif;
@@ -51,8 +52,8 @@ header {
 
 .logo {
   font-family: var(--amatic);
-  font-size: 35px;
-  color: var(--colorLight);
+  font-size: 2.5rem;
+  color: var(--colorAction);
   padding: 10px;
 }
 
@@ -60,7 +61,6 @@ header {
 #active {
   text-decoration: underline;
   color: var(--colorSkyBlue);
-  text-transform: uppercase;
 }
 
 #menu {
@@ -122,6 +122,10 @@ header {
   row-gap: 10px;
 }
 
+.main-content a:hover {
+  opacity: 0.8;
+}
+
 .home-box1,
 .home-box3,
 .home-box4 {
@@ -129,16 +133,17 @@ header {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-color: var(--colorBlue);
+  background-color: var(--colorRubin);
   color: var(--colorLight);
 }
 .home-box1 {
   grid-row: span 7;
-  background-color: #008a9c;
+  background-color: var(--colorBlue);
 }
 
 .home-box1 p {
   width: 50%;
+  margin-bottom: 10px;
 }
 
 .home-box2 {
@@ -153,41 +158,35 @@ header {
   grid-row: span 3;
 }
 
-.img1 {
-  background-image: url(../images/astronomy-ge5cb05244_640.png);
+.img1,
+.img2,
+.img3,
+.img4,
+.img5 {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.img1 {
+  background-image: url(../images/astronomy-ge5cb05244_640.png);
 }
 
 .img2 {
   background-image: url(../images/evolution-g9652136be_640.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .img3 {
   background-image: url(../images/biology-gdf6883720_640.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
+
 .img4 {
   background-image: url(../images/tree-gb7c1e05a2_640.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
+
 .img5 {
   background-image: url(../images/linear-gfd439c291_640.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
-/* h3 {
-  background-color: var(--colorSkyBlue);
-} */
 
 /* <--- Index */
 
@@ -196,8 +195,16 @@ header {
 /* <--- General */
 /* ---> General */
 /* <--- General */
-/* ---> General */
-/* <--- General */
+/* ---> Footer */
+.footer {
+  background-color: var(--colorRubin);
+}
+
+i {
+  color: var(--colorLight);
+  font-size: 50px;
+}
+/* <--- Footer */
 
 @media screen and (min-width: 950px) {
   .navigation {
