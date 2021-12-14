@@ -48,19 +48,19 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  opacity: 0.95;
 }
 
 .logo {
   font-family: var(--amatic);
   font-size: 2.5rem;
-  color: var(--colorAction);
+  color: var(--colorLight);
   padding: 10px;
 }
 
 .nav-link:hover,
 #active {
   text-decoration: underline;
-  color: var(--colorSkyBlue);
 }
 
 #menu {
@@ -117,9 +117,8 @@ header {
 .main-content {
   display: grid;
   grid-template-columns: fit-content(auto, 1fr);
-  grid-template-rows: repeat(130, 50px);
-  column-gap: 10px;
-  row-gap: 10px;
+  grid-auto-rows: 50px;
+  gap: 10px;
 }
 
 .main-content a:hover {
@@ -128,7 +127,12 @@ header {
 
 .home-box1,
 .home-box3,
-.home-box4 {
+.home-box4,
+.cosmo-box1,
+.evolution-box1,
+.biology-box1,
+.ecology-box1,
+.ai-box1 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -138,7 +142,6 @@ header {
 }
 .home-box1 {
   grid-row: span 7;
-  background-color: var(--colorBlue);
 }
 
 .home-box1 p {
@@ -146,16 +149,62 @@ header {
   margin-bottom: 10px;
 }
 
-.home-box2 {
-  grid-row: span 7;
-  background-image: url(../images/tyrannosaurus.jpg);
+.home-box2,
+.home-box5,
+.home-box6,
+.home-box7 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.home-box4 {
-  grid-row: span 3;
+.home-box2 {
+  grid-row: span 7;
+  background-image: url(../images/tyrannosaurus.jpg);
+}
+
+.home-box6 {
+  grid-row: span 7;
+  animation: home-box6 20s ease-in-out infinite;
+}
+@keyframes home-box6 {
+  0%,
+  100% {
+    background-image: url(../images/moon-display.jpg);
+  }
+  25% {
+    background-image: url(../images/evolution2.jpg);
+  }
+  50% {
+    background-image: url(../images/anatomical.jpg);
+  }
+  75% {
+    background-image: url(../images/robotics1.jpg);
+  }
+}
+
+.frame {
+  height: 100%;
+  width: 100%;
+}
+
+.home-box5 {
+  display: none;
+}
+.home-box7 {
+  display: none;
+}
+
+/* <--- Index */
+
+/* Exhibition ---> */
+
+.exhibition-main {
+  grid-row: span 10;
+  background-image: url(../images/museum-exhibition.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .img1,
@@ -166,6 +215,8 @@ header {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  padding: 30px;
+  border: 1px solid;
 }
 
 .img1 {
@@ -188,22 +239,135 @@ header {
   background-image: url(../images/linear-gfd439c291_640.png);
 }
 
-/* <--- Index */
+.cosmo-box1,
+.evolution-box1,
+.biology-box1,
+.ecology-box1,
+.ai-box1 {
+  grid-row: span 6;
+  padding: 10px 20px;
+  background-color: var(--colorRubin);
+  color: var(--colorLight);
+  /* color: var(--colorBlue); */
+}
 
-/* <--- General */
-/* ---> General */
-/* <--- General */
+.cosmo-box2,
+.evolution-box2,
+.biology-box2,
+.ecology-box2,
+.ai-box2 {
+  grid-row: span 4;
+  background-image: url(../images/planetarium1.jpg);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cosmo-box3,
+.cosmo-box4,
+.evolution-box3,
+.evolution-box4,
+.biology-box3,
+.biology-box4,
+.ecology-box3,
+.ecology-box4,
+.ai-box3,
+.ai-box4 {
+  grid-row: span 8;
+  background-image: url(../images/moon-display.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cosmo-box4 {
+  background-image: url(../images/moon-land.jpg);
+}
+
+.evolution-box2 {
+  background-image: url(../images/mammoth.jpg);
+  background-position: center;
+}
+
+.evolution-box3 {
+  background-image: url(../images/evolution2.jpg);
+  background-position: bottom;
+}
+
+.evolution-box4 {
+  background-image: url(../images/neandertal.jpg);
+}
+
+.biology-box2 {
+  background-image: url(../images/brain.jpg);
+  background-position: center;
+}
+
+.biology-box3 {
+  background-image: url(../images/anatomical.jpg);
+  background-position: right;
+}
+.biology-box4 {
+  background-image: url(../images/statue.jpg);
+}
+
+.ecology-box2 {
+  background-image: url(../images/windmill.jpg);
+  background-position: center;
+}
+
+.ecology-box3 {
+  background-image: url(../images/alternative.jpg);
+}
+
+.ecology-box4 {
+  background-image: url(../images/solar-powerjpg.jpg);
+}
+
+.ai-box2 {
+  background-image: url(../images/cybernetics.jpg);
+  background-position: center;
+}
+
+.ai-box3 {
+  background-image: url(../images/robotics1.jpg);
+}
+
+.ai-box4 {
+  background-image: url(../images/robot2.jpg);
+  background-position-y: 20%;
+}
+
+/* <--- Exhibition */
+
 /* ---> General */
 /* <--- General */
 /* ---> Footer */
+
 .footer {
   background-color: var(--colorRubin);
+  text-align: center;
+}
+
+.footer p {
+  color: var(--colorLight);
 }
 
 i {
   color: var(--colorLight);
   font-size: 50px;
+  padding: 10px;
 }
+
+hr {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.footer li {
+  padding: 5px;
+}
+
 /* <--- Footer */
 
 @media screen and (min-width: 950px) {
@@ -225,6 +389,41 @@ i {
     grid-template-columns: repeat(6, 1fr);
   }
 
+  .exhibition {
+    display: flex;
+  }
+
+  .ex-menu {
+    position: sticky;
+    top: 0;
+  }
+
+  .home-box4 {
+    height: 100px;
+  }
+
+  .cosmo-box1,
+  .evolution-box1,
+  .biology-box1,
+  .ecology-box1,
+  .ai-box1 {
+    grid-row: span 12;
+  }
+
+  .evolution-box2,
+  .ecology-box2,
+  .ai-box2 {
+    grid-row: span 6;
+  }
+  .evolution-box3,
+  .evolution-box4,
+  .ecology-box3,
+  .ecology-box4,
+  .ai-box3,
+  .ai-box4 {
+    grid-row: span 6;
+  }
+
   .col2 {
     grid-column: span 2;
   }
@@ -233,7 +432,16 @@ i {
     grid-column: span 3;
   }
 
+  .col4 {
+    grid-column: span 4;
+  }
+
   .col6 {
     grid-column: span 6;
+  }
+  .home-box7 {
+    display: flex;
+    grid-row: span 7;
+    background-image: url(../images/erth-spin.gif);
   }
 }
