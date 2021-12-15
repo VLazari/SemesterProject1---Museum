@@ -1,4 +1,4 @@
-/* General ---> */
+/* -------------------------- General --------------------------> */
 * {
   margin: 0;
   padding: 0;
@@ -34,9 +34,24 @@ h3 {
   font-family: var(--public);
 }
 
-/* <--- General */
+.parallax {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: var(--colorLight);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 300px;
+}
 
-/* Header ---> */
+/* <-------------------------- General -------------------------- */
+
+/* -------------------------- Header --------------------------> */
 
 header {
   height: 230px;
@@ -110,15 +125,16 @@ header {
   width: 99.5%;
 }
 
-/* <--- Header */
+/* <-------------------------- Header -------------------------- */
 
-/* Index ---> */
+/* -------------------------- Index -------------------------- */
 
 .main-content {
   display: grid;
   grid-template-columns: fit-content(auto, 1fr);
   grid-auto-rows: 50px;
   gap: 10px;
+  margin: 10px;
 }
 
 .main-content a:hover {
@@ -132,7 +148,9 @@ header {
 .evolution-box1,
 .biology-box1,
 .ecology-box1,
-.ai-box1 {
+.ai-box1,
+.explore-box1,
+.explore-box2 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -152,7 +170,15 @@ header {
 .home-box2,
 .home-box5,
 .home-box6,
-.home-box7 {
+.home-box7,
+.explore-box3,
+.explore-box4,
+.explore-box5,
+.explore-box6,
+.explore-box7,
+.explore-box8,
+.explore-box9,
+.explore-box10 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -195,16 +221,22 @@ header {
   display: none;
 }
 
-/* <--- Index */
+/* <-------------------------- Index -------------------------- */
 
-/* Exhibition ---> */
+/* -------------------------- Exhibition --------------------------> */
 
-.exhibition-main {
-  grid-row: span 10;
-  background-image: url(../images/museum-exhibition.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.ex-menu {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.ex-menu a {
+  padding: 10px;
+}
+
+.ex-menu a:hover {
+  opacity: 80%;
 }
 
 .img1,
@@ -215,8 +247,7 @@ header {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  padding: 30px;
-  border: 1px solid;
+  border: 5px solid;
 }
 
 .img1 {
@@ -239,6 +270,10 @@ header {
   background-image: url(../images/linear-gfd439c291_640.png);
 }
 
+.exhibition-parallax {
+  background-image: url(../images/museum-exhibition.jpg);
+}
+
 .cosmo-box1,
 .evolution-box1,
 .biology-box1,
@@ -248,7 +283,6 @@ header {
   padding: 10px 20px;
   background-color: var(--colorRubin);
   color: var(--colorLight);
-  /* color: var(--colorBlue); */
 }
 
 .cosmo-box2,
@@ -338,15 +372,142 @@ header {
   background-position-y: 20%;
 }
 
-/* <--- Exhibition */
+/* <-------------------------- Exhibition -------------------------- */
 
-/* ---> General */
-/* <--- General */
-/* ---> Footer */
+/* -------------------------- Visit --------------------------> */
+
+.visit-parallax {
+  background-image: url(../images/building-museum.png);
+}
+
+.visit-box1,
+.visit-box2 {
+  background-color: var(--colorRubin);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--colorLight);
+  padding: 20px;
+}
+
+.visit-box1 {
+  grid-row: span 7;
+}
+
+.visit-box2,
+.visit-box3 {
+  grid-row: span 7;
+  background-image: url(../images/coffeehouse.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.visit-box3 {
+  background-image: url(../images/shop.jpg);
+}
+
+/* <-------------------------- Visit -------------------------- */
+
+/* -------------------------- Events --------------------------> */
+
+.event-box1 {
+  background-color: var(--colorRubin);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--colorLight);
+  padding: 20px;
+}
+
+.event-box1 {
+  grid-row: span 7;
+}
+
+.event-box2 {
+  grid-row: span 7;
+  background-image: url(../images/steampunk.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: aero 5s forwards;
+}
+@keyframes aero {
+  0% {
+    background-position-y: -400px;
+  }
+  100% {
+    background-position-y: 0px;
+  }
+}
+
+.event-box3 {
+  grid-row: span 7;
+  background-image: url(../images/engine.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* <-------------------------- Events -------------------------- */
+
+/* -------------------------- Explore --------------------------> */
+
+.explore-box2 {
+  grid-row: span 4;
+  padding: 10px;
+}
+
+.explore-box3 {
+  grid-row: span 5;
+  background-image: url(../images/kids-science.jpg);
+}
+
+.explore-box4 {
+  grid-row: span 5;
+  background-image: url(../images/kids-science2.jpg);
+}
+
+.explore-box5 {
+  grid-row: span 5;
+  background-image: url(../images/kids-science3.jpg);
+}
+
+.explore-box6 {
+  grid-row: span 5;
+  background-image: url(../images/kids-science4.jpg);
+}
+
+.explore-box7 {
+  grid-row: span 5;
+  background-image: url(../images/kids-science5.jpg);
+}
+
+.explore-box8 {
+  grid-row: span 5;
+  background-image: url(../images/kids-science6.jpg);
+}
+
+.explore-box9 {
+  grid-row: span 5;
+  background-image: url(../images/reserch1.jpg);
+}
+
+.explore-box10 {
+  grid-row: span 5;
+  background-image: url(../images/reserch2.jpg);
+}
+
+/* <-------------------------- Explore -------------------------- */
+
+/* -------------------------- Footer --------------------------> */
 
 .footer {
-  background-color: var(--colorRubin);
+  background-color: #0e0e0c;
   text-align: center;
+  opacity: 90%;
 }
 
 .footer p {
@@ -368,7 +529,7 @@ hr {
   padding: 5px;
 }
 
-/* <--- Footer */
+/* <-------------------------- Footer -------------------------- */
 
 @media screen and (min-width: 950px) {
   .navigation {
@@ -398,6 +559,10 @@ hr {
     top: 0;
   }
 
+  .ex-menu a {
+    width: 100%;
+  }
+
   .home-box4 {
     height: 100px;
   }
@@ -422,6 +587,10 @@ hr {
   .ai-box3,
   .ai-box4 {
     grid-row: span 6;
+  }
+
+  .explore-box2 {
+    grid-row: span 5;
   }
 
   .col2 {
