@@ -647,7 +647,7 @@ hr {
     grid-row: span 5;
   }
 
-  support-box1 {
+  .support-box1 {
     grid-row: span 12;
   }
 
