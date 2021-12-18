@@ -41,6 +41,7 @@ h3 {
   align-items: center;
   background-color: black;
   color: var(--colorLight);
+  background-image: url(../images/building-museum.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -150,7 +151,11 @@ header {
 .ecology-box1,
 .ai-box1,
 .explore-box1,
-.explore-box2 {
+.explore-box2,
+.support-box1,
+.support-box2,
+.support-box3,
+.support-box5 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -160,11 +165,7 @@ header {
 }
 .home-box1 {
   grid-row: span 7;
-}
-
-.home-box1 p {
-  width: 50%;
-  margin-bottom: 10px;
+  padding: 10px;
 }
 
 .home-box2,
@@ -178,7 +179,8 @@ header {
 .explore-box7,
 .explore-box8,
 .explore-box9,
-.explore-box10 {
+.explore-box10,
+.support-box4 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -215,9 +217,6 @@ header {
 }
 
 .home-box5 {
-  display: none;
-}
-.home-box7 {
   display: none;
 }
 
@@ -270,16 +269,12 @@ header {
   background-image: url(../images/linear-gfd439c291_640.png);
 }
 
-.exhibition-parallax {
-  background-image: url(../images/museum-exhibition.jpg);
-}
-
 .cosmo-box1,
 .evolution-box1,
 .biology-box1,
 .ecology-box1,
 .ai-box1 {
-  grid-row: span 6;
+  grid-row: span 8;
   padding: 10px 20px;
   background-color: var(--colorRubin);
   color: var(--colorLight);
@@ -333,7 +328,7 @@ header {
 }
 
 .biology-box2 {
-  background-image: url(../images/brain.jpg);
+  background-image: url(../images/dna.jpg);
   background-position: center;
 }
 
@@ -342,7 +337,7 @@ header {
   background-position: right;
 }
 .biology-box4 {
-  background-image: url(../images/statue.jpg);
+  background-image: url(../images/brain-light.jpg);
 }
 
 .ecology-box2 {
@@ -375,10 +370,6 @@ header {
 /* <-------------------------- Exhibition -------------------------- */
 
 /* -------------------------- Visit --------------------------> */
-
-.visit-parallax {
-  background-image: url(../images/building-museum.png);
-}
 
 .visit-box1,
 .visit-box2 {
@@ -456,7 +447,7 @@ header {
 /* -------------------------- Explore --------------------------> */
 
 .explore-box2 {
-  grid-row: span 4;
+  grid-row: span 8;
   padding: 10px;
 }
 
@@ -502,10 +493,73 @@ header {
 
 /* <-------------------------- Explore -------------------------- */
 
+/* -------------------------- Support --------------------------> */
+
+.support-box1 {
+  grid-row: span 8;
+  padding: 10px;
+}
+
+.support-box2 {
+  grid-row: span 12;
+}
+
+.support-box3 {
+  grid-row: span 7;
+  padding: 10px;
+}
+
+.support-box4 {
+  grid-row: span 7;
+  background-image: url(../images/volunteer.jpg);
+}
+
+.support-box5 {
+  grid-row: span 3;
+  padding: 10px;
+}
+
+.support-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+input {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-family: var(--public);
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  margin: 10px;
+}
+
+.support-btn {
+  background-color: var(--colorAction);
+  color: var(--colorLight);
+  padding: 10px;
+  border: 5px solid var(--colorAction);
+  width: 100%;
+  border-radius: 10px;
+  font-size: 17px;
+}
+
+.support-btn:hover {
+  cursor: pointer;
+  background-color: var(--colorLight);
+  color: var(--colorAction);
+}
+
+/* <-------------------------- Support -------------------------- */
+
 /* -------------------------- Footer --------------------------> */
 
 .footer {
-  background-color: #0e0e0c;
+  background-color: #010101;
   text-align: center;
   opacity: 90%;
 }
@@ -593,6 +647,10 @@ hr {
     grid-row: span 5;
   }
 
+  support-box1 {
+    grid-row: span 12;
+  }
+
   .col2 {
     grid-column: span 2;
   }
@@ -605,12 +663,17 @@ hr {
     grid-column: span 4;
   }
 
+  .col5 {
+    grid-column: span 5;
+  }
+
   .col6 {
     grid-column: span 6;
   }
-  .home-box7 {
-    display: flex;
-    grid-row: span 7;
-    background-image: url(../images/erth-spin.gif);
+}
+
+@media screen and (max-width: 452px) {
+  .support-box2 {
+    grid-row: span 20;
   }
 }
